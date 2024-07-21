@@ -1,0 +1,518 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box; 
+}
+
+/* MAIN CONTAINER */
+#container{
+	width: 100%;
+	/*height: 100%;*/
+	background-color: rgb(245, 242, 242);
+	position: relative;
+}
+
+/* STRUCTURE OF DIVS */
+.structure, .gallery{
+	width: 100%;
+	height: 600px;
+	position: relative;
+}
+
+.e-section{
+	width: 100%;
+	height: 410px;
+}
+
+/* STRUCTURE OF EVEN DIVS */
+.e-structure{
+	width: 900px;
+	height: inherit;
+	margin: 0 auto;
+	position: relative;
+}
+
+/* FOR HEADINGS */
+.h2{
+	position: relative;
+	top: 0px;
+	width: 100%;
+	height: 70px;
+	/* background-color: chocolate; */
+}
+h2{
+	text-align: center;
+	color: gray;
+	text-transform: uppercase;
+	font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+/* BACKGROUND IMAGE SECTION */
+.back-img{
+	width: 100%;
+	height: 600px;
+	background-image: url(slider1.jpg);
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
+.back-img h1, .back-img p{position: relative;
+	top: 200px;
+	color: white;
+	font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+	text-align: center;
+}
+
+/* NAVBAR */
+.navbar{
+	position: fixed;
+	top: 0;
+	width: 100%;
+	height: 100px;
+	background-image: linear-gradient(to right, rgb(126, 123, 123), rgb(241, 228, 228), rgb(126, 123, 123));
+	opacity: 0.7;
+}
+
+.navbar img{
+	position: absolute;
+	left: 220px;
+	top: 50px;
+}
+
+.navbar li{
+	display: inline-block;
+	position: relative;
+	left: 600px;
+	top: 0;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 19px;
+	margin-left: 30px;
+	padding: 70px 3px 8px 3px ;
+	cursor: pointer;
+	transition: color 0.4s linear;
+}
+
+.navbar li a{
+	text-decoration: none;
+	color: black;
+}
+
+.navbar li a:hover{
+	color: #ffff;
+}
+
+.navbar li::before{
+	content: "";
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	background: rgb(3, 92, 3);
+	z-index: -1;
+	transition: transform 0.5s;
+	transform-origin: 0 0;
+	transition-timing-function: cubic-bezier(0.5, 1.6, 0.4, 0.7);
+}
+
+.navbar li::before{
+	transform: scaleY(0);
+}
+
+.navbar li:hover::before{
+	transform: scaleY(1);
+}
+
+/* ABOUT img */
+.img{
+	background-image: url(about-img.jpg);
+	background-size: cover;
+	width: 430px;
+	height: 300px;
+	position: relative;
+	top: 22px;
+	left: 10px;
+}
+
+.hover{
+	width: 410px;
+	height: 280px;
+	position: absolute;
+	top: 30px;
+	left: 20px;
+	transition: 0.6s ease-in-out;
+}
+
+.hover:hover{
+	transform: scaleX(4);
+	transform: scaleY(-1);
+	background-color: chartreuse;
+	opacity: 0.2;
+	border-radius: 5px;
+	
+}
+
+.about-img h2{
+	position: relative;
+	left: 110px;
+	top: -280px;
+	font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+	text-transform: uppercase;
+	color: gray;
+}
+
+.about-img p{
+	position: absolute;
+	left: 450px;
+	top: 60px;
+	text-align: justify;
+	right: 5px;
+	font-family: Arial, Helvetica, sans-serif;
+	color: gray;
+}
+
+.disc li{
+	display: inline-block;
+	position: relative;
+	top: 410px;
+	left: 650px;
+	color: black;
+}
+
+.disc li:hover{
+	background-color: green;
+	border-radius: 50%;
+}
+/* GALLERY */
+.gallery{
+	/* background: red; */
+}
+
+.images{
+	width: inherit;
+	height: 530px;
+	/* background-color: blue; */
+	position: relative;
+	top: 0px;
+}
+
+.images>div{
+	position: relative;
+	display: inline-block;
+	float: left;
+	width: 25%;
+	height: 275px;
+	background-repeat: no-repeat;
+	background-size: cover;
+	/* background-color: orangered; */
+}
+
+.one{
+	background-image: url(gallery-1.jpg);
+}
+.two{
+	background-image: url(gallery-2.jpg);
+}
+.three{
+	background-image: url(gallery-3.jpg);
+}
+.four{
+	background-image: url(gallery-4.jpg);
+}
+.five{
+	background-image: url(gallery-5.jpg);
+}
+.six{
+	background-image: url(gallery-6.jpg);
+}
+.seven{
+	background-image: url(gallery-7.jpg);
+}
+.eight{
+	background-image: url(gallery-8.jpg);
+}
+
+.pop{
+	width: 320px;
+	height: 260px;
+	position: relative;
+	top: 10px;
+	left: 8px;
+	/* background-color: green; */
+}
+.pop::before{
+	content: "";
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+}
+
+.pop::before{
+	transition: 0.6s ease-in-out;
+	transform: scale(-0.3);
+	opacity: 0.3;
+}
+.pop:hover:before{
+	transition: 0.6s ease-in-out;
+	background-color: chartreuse;
+	transform: scale(1);
+}
+
+
+/* MENU CHOICES DIV */
+.menu .h2 h2{
+	position: relative;
+	top: 20px;
+}
+
+.choice{
+	top: 55px;
+}
+
+.le-li, .rt-li{
+	position: relative;
+	width: 445px;
+	height: 400px;
+	display: inline-block;
+}
+
+.rt-li{
+	left: 10px;
+}
+
+.choice li{
+	position: relative;
+	list-style: none;
+}
+
+.choice h5{
+	float: left;
+	font-size: 18px;
+	font-family: Arial, Helvetica, sans-serif;
+	margin-top: 5px;
+	padding: 15px 0px 6px 0px;
+}
+
+.price{
+	position: relative;
+	top: 22px;
+	left: 3px;
+	color: green;
+}
+
+.choice p{
+	font-family: Arial, Helvetica, sans-serif;
+	margin-top: 5px;
+	margin-bottom: 20px;
+}
+
+.btn{
+	position: relative;
+	top: 35px;
+	left: 41%;
+	width: 70px;
+	height: 35px;
+	margin: 5px;
+	text-transform: uppercase;
+	font-family: Arial, Helvetica, sans-serif;
+	color: gray;
+	background-color: white;
+	border: 1px solid gray;
+}
+
+.btn:hover{
+	outline: 4px solid chartreuse;
+	border: 1px solid white;
+	background-color: chartreuse;
+	color: white;
+}
+
+/* FORM RESERVATION */
+.form-reservation{
+	background-image: url(table_banner.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	/* filter: brightness(50%); */
+}
+
+.diff-heading{
+	color: white;
+	position: relative;
+	top: 30px;
+}
+
+/* FORM DIVS */
+.left, .right{
+	position: relative;
+	top: 60px;
+	left: 215px;
+	width: 450px;
+	height: 230px;
+	display: inline-block;
+}
+
+.center{
+	position: relative;
+	top: 50px;
+	left: 220px;
+	width: 824px;
+	height: 180px;
+}
+
+label{
+	font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+	position: relative;
+	top: 10px;
+	left: 5px;
+}
+.left input, .right input{
+	position: relative;
+	top: 15px;
+	left: 5px;
+	display: block;
+	width: 440px;
+	height: 35px;
+	background-color:  gray;
+	opacity: 0.5;
+	border: 1px solid white;
+	outline: none;
+}
+
+.center input{
+	position: relative;
+	top: 15px;
+	width: 895px;
+	height: 145px;
+	background-color: gray;
+	opacity: 0.5;
+	border: 1px solid white;
+	outline: none;
+}
+
+.btn1{
+	width: 200px;
+	top: 60px;
+	background-color: chartreuse;
+	color: #fff;
+	border: none;
+}
+
+/* CONTACT US */
+.contact h2{
+	position: relative;
+	top: 30px;
+}
+
+.contact p{
+	position: relative;
+	top: 60px;
+	text-align: center;
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+.contact input{
+	position: relative;
+	top: 70px;
+	width: 430px;
+	height: 35px;
+	margin-right: 10px;
+	outline: none;
+}
+
+.contact input::placeholder, textarea::placeholder{
+	position: relative;
+	padding: 5px;
+	color: rgb(48, 45, 45);
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+.contact .text{
+	position: relative;
+	top: 85px;
+	width: 876px;
+	height: 145px;
+	outline: none;
+}
+
+.contact button{
+	top: 100px;
+	width: 125px;
+}
+
+/* MAP */
+
+/* RESTAURANT DETAILS */
+.details{
+	width: 100%;
+	height: 300px;
+	background-color: gray;
+}
+
+.details img{
+	position: relative;
+	top: 50px;
+	left: 220px;
+}
+
+.details li{
+	display: inline-block;
+	position: relative;
+	left: 535px;
+	top: 20px;
+	width: 200px;
+	font-size: 18px;
+}
+
+.details p{
+	position: relative;
+	top: 40px;
+	width: 250px;
+	left: 220px;
+}
+
+.list li{
+	position: relative;
+	display: block;
+	left: 535px;
+	top: -15px;
+	margin-bottom: 15px;
+}
+
+.images-div{
+	position: relative;
+	top: -200px;
+	left: 715px;
+	width: 200px;
+	height: 166px;
+}
+
+.images-div img{
+	position: relative;
+	top: 0px;
+	left: 0px;
+	width: 50%;
+	float: left;
+}
+
+.fb-img img{
+	position: relative;
+	top: -365px;
+	left: 720px;
+	width: 200px;
+}
+
+.end{
+	width: 100%;
+	height: 80px;
+	background: chartreuse;
+}
+
+.end p{
+	position: relative;
+	top: 35px;
+	left: 350px;
+	color: #fff;
+	font-family: Arial, Helvetica, sans-serif;
+}
